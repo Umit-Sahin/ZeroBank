@@ -10,9 +10,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.JavascriptExecutor;
-
+import org.openqa.selenium.By;
 import java.util.List;
 
 public class PayBillStepDefs {
@@ -50,9 +48,8 @@ public class PayBillStepDefs {
     public void warning_message_should_be_displayed(String message) {
         PayBillPage payBillPage=new PayBillPage();
         payBillPage.payBillPayButton.click();
-//        BrowserUtils.waitForVisibility(payBillPage.fillOutMessage,3);
-//        Assert.assertEquals(message,payBillPage.fillOutMessage.getAttribute("alertContent"));
-        Assert.assertTrue(payBillPage.fillOutMessage.isEnabled());
+        String actualMessage= Driver.get().findElement(By.name("amount")).getAttribute("validationMessage");
+        Assert.assertEquals(message,actualMessage);
 
     }
 
@@ -80,7 +77,6 @@ public class PayBillStepDefs {
         PayBillPage payBillPage=new PayBillPage();
         Assert.assertTrue(payBillPage.payBillDateInputbox.getText().isEmpty());
     }
-
 
 
 }

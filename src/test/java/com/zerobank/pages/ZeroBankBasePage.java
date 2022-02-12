@@ -28,7 +28,7 @@ public abstract class ZeroBankBasePage {
     public WebElement payBills;
 
     @FindBy(css = "#money_map_tab>a")
-    public WebElement myMoneyMAp;
+    public WebElement myMoneyMap;
 
     @FindBy(css = "#online_statements_tab>a")
     public WebElement onlineStatements;
