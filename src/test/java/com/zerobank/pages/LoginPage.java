@@ -51,6 +51,8 @@ public class LoginPage {
         WebElement accountSummaryLink = Driver.get().findElement(By.id("account_summary_link"));
         accountSummaryLink.click();
 
+//        Driver.get().get("http://zero.webappsecurity.com/bank/account-summary.html");
+
 //        BrowserUtils.waitForClickablility(advanceButton,2);
 //        advanceButton.click();
 //        proceedLink.click();

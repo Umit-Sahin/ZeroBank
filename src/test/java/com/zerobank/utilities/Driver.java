@@ -66,15 +66,23 @@ public class Driver {
                     WebDriverManager.getInstance(SafariDriver.class).setup();
                     driver = new SafariDriver();
                     break;
-                case "chromeSSL":
+                case "chrome-SSL":
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions capability = new ChromeOptions();
+//                    capability.setAcceptInsecureCerts(true);
                     capability.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
                     capability.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS,true);
                     driver=new ChromeDriver(capability);
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+                    break;
+                case "chrome-73":
+                    ChromeOptions options = new ChromeOptions();
+                    options.setBinary("path");
+                    options.setAcceptInsecureCerts(true);
+                    WebDriverManager.chromedriver().driverVersion("73.0.3683.68").setup();
+                    driver = new ChromeDriver(options);
+                    break;
             }
 
         }
