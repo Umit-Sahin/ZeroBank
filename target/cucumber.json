@@ -1,0 +1,122 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-03-07T23:17:44.790Z",
+        "before": [
+          {
+            "result": {
+              "duration": 9436077500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepdefinations.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Savings account redirect",
+        "description": "",
+        "id": "navigating-to-specific-accounts-in-accounts-activity;savings-account-redirect",
+        "after": [
+          {
+            "result": {
+              "duration": 854631400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepdefinations.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6349190400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.zerobank.stepdefinations.AccountActivityNavigationStepDefs.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3164137100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user clicks on Savings link on the Account Summary page",
+            "match": {
+              "location": "com.zerobank.stepdefinations.AccountActivityNavigationStepDefs.the_user_clicks_on_Savings_link_on_the_Account_Summary_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 90844600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the Account Activity page should be displayed",
+            "match": {
+              "location": "com.zerobank.stepdefinations.AccountActivityNavigationStepDefs.the_Account_Activity_page_should_be_displayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 163054300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Account drop down should have Savings selected",
+            "match": {
+              "location": "com.zerobank.stepdefinations.AccountActivityNavigationStepDefs.account_drop_down_should_have_Savings_selected()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression"
+          },
+          {
+            "name": "@AccountActivityNavigation"
+          },
+          {
+            "name": "@login"
+          }
+        ]
+      }
+    ],
+    "name": "Navigating to specific accounts in Accounts Activity",
+    "description": "",
+    "id": "navigating-to-specific-accounts-in-accounts-activity",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/AccountActivityNavigation.feature",
+    "tags": [
+      {
+        "name": "@Regression",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@AccountActivityNavigation",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 13
+        }
+      }
+    ]
+  }
+]

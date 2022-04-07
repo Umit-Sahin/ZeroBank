@@ -2,7 +2,7 @@ package com.zerobank.stepdefinations;
 
 import com.zerobank.pages.LoginPage;
 import com.zerobank.pages.NewPayeePage;
-import com.zerobank.utilities.BrowserUtils;
+import com.zerobank.utilities.Utils;
 import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -29,9 +29,9 @@ public class PurchaseForeignCurrencyStepDefs {
     @Then("following currencies should be available")
     public void following_currencies_should_be_available(List<String> currency) {
         NewPayeePage payeePage=new NewPayeePage();
-        BrowserUtils.waitFor(2);
+        Utils.waitFor(2);
 
-        List<String > actualCurrencies = BrowserUtils.getElementsText(payeePage.currencyOptions);
+        List<String > actualCurrencies = Utils.getElementsText(payeePage.currencyOptions);
         System.out.println("currency.size() = " + currency.size());
         System.out.println("actualCurrencies.size() = " + actualCurrencies.size());
         Assert.assertTrue(actualCurrencies.containsAll(currency));
@@ -40,7 +40,7 @@ public class PurchaseForeignCurrencyStepDefs {
 /*        Select selectCurrency = new Select(payeePage.currencyDropbox);
         for (int i=1; i< currency.size() ; i++) {
             selectCurrency.selectByIndex(i);
-            BrowserUtils.waitFor(2);
+            Utils.waitFor(2);
 
         }*/
 

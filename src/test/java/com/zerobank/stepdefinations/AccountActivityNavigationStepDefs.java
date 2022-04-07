@@ -3,7 +3,7 @@ package com.zerobank.stepdefinations;
 import com.zerobank.pages.AccountActivity;
 import com.zerobank.pages.AccountSummary;
 import com.zerobank.pages.LoginPage;
-import com.zerobank.utilities.BrowserUtils;
+import com.zerobank.utilities.Utils;
 import com.zerobank.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -22,7 +22,7 @@ public class AccountActivityNavigationStepDefs {
 
     @When("the user clicks on Savings link on the Account Summary page")
     public void the_user_clicks_on_Savings_link_on_the_Account_Summary_page() {
-        BrowserUtils.waitFor(2);
+        Utils.waitFor(2);
         AccountSummary accountSummary = new AccountSummary();
         accountSummary.chooseAccount("Savings");
     }
@@ -43,10 +43,10 @@ public class AccountActivityNavigationStepDefs {
 
     @When("the user clicks on Brokerage link on the Account Summary page")
     public void the_user_clicks_on_Brokerage_link_on_the_Account_Summary_page() {
-        BrowserUtils.waitFor(2);
+        Utils.waitFor(2);
         AccountSummary accountSummary = new AccountSummary();
         accountSummary.chooseAccount("Brokerage");
-        BrowserUtils.waitFor(3);
+        Utils.waitFor(3);
     }
 
     @Then("Account drop down should have Brokerage selected")
@@ -59,7 +59,7 @@ public class AccountActivityNavigationStepDefs {
 
     @When("the user clicks on Checking link on the Account Summary page")
     public void the_user_clicks_on_Checking_link_on_the_Account_Summary_page() {
-        BrowserUtils.waitFor(2);
+        Utils.waitFor(2);
         AccountSummary accountSummary = new AccountSummary();
         accountSummary.chooseAccount("Checking");
     }

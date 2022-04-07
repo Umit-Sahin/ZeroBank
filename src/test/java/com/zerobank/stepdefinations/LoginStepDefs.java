@@ -1,7 +1,7 @@
 package com.zerobank.stepdefinations;
 
 import com.zerobank.pages.LoginPage;
-import com.zerobank.utilities.BrowserUtils;
+import com.zerobank.utilities.Utils;
 import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -17,7 +17,7 @@ public class LoginStepDefs {
     @Given("the user accesses the Log in page")
     public void the_user_accesses_the_Log_in_page() {
         Driver.get().get(ConfigurationReader.get("url"));
-        BrowserUtils.waitFor(2);
+        Utils.waitFor(2);
         new LoginPage().signIn.click();
     }
     @When("the user logged in as valid {string} {string}")

@@ -2,7 +2,7 @@ package com.zerobank.stepdefinations;
 
 import com.zerobank.pages.AccountActivity;
 import com.zerobank.pages.LoginPage;
-import com.zerobank.utilities.BrowserUtils;
+import com.zerobank.utilities.Utils;
 import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -43,7 +43,7 @@ public class FindTransactionsStepDefs {
 
     @Then("results table should only show transactions dates between {string} to {string}")
     public void results_table_should_only_show_transactions_dates_between_to(String fromDate, String toDate) throws ParseException {
-        BrowserUtils.waitForVisibility(Driver.get().findElement(By.id("filtered_transactions_for_account")), 2);
+        Utils.waitForVisibility(Driver.get().findElement(By.id("filtered_transactions_for_account")), 2);
         AccountActivity accountActivity=new AccountActivity();
         Assert.assertTrue(accountActivity.verifyDateInRange2(fromDate, toDate));
 
@@ -66,7 +66,7 @@ public class FindTransactionsStepDefs {
         AccountActivity accountActivity=new AccountActivity();
         accountActivity.descriptionInputBox.clear();
         accountActivity.descriptionInputBox.sendKeys(str+Keys.ENTER);
-        BrowserUtils.waitFor(2);
+        Utils.waitFor(2);
     }
 
 
@@ -101,7 +101,7 @@ public class FindTransactionsStepDefs {
         AccountActivity accountActivity = new AccountActivity();
         accountActivity.selectType(str);
         accountActivity.findButton.click();
-        BrowserUtils.waitFor(2);
+        Utils.waitFor(2);
     }
 
     @Then("results table should show no result under Withdrawal")

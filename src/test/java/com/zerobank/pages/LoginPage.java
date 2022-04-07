@@ -1,6 +1,6 @@
 package com.zerobank.pages;
 
-import com.zerobank.utilities.BrowserUtils;
+import com.zerobank.utilities.Utils;
 import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
 import org.openqa.selenium.By;
@@ -37,7 +37,7 @@ public class LoginPage {
 
     public void login(String userNameStr, String passwordStr) {
         Driver.get().get(ConfigurationReader.get("url"));
-        BrowserUtils.waitForClickablility(signIn,3);
+        Utils.waitForClickablility(signIn,3);
         signIn.click();
 
         loginInputBox.sendKeys(userNameStr);
@@ -53,7 +53,7 @@ public class LoginPage {
 
 //        Driver.get().get("http://zero.webappsecurity.com/bank/account-summary.html");
 
-//        BrowserUtils.waitForClickablility(advanceButton,2);
+//        Utils.waitForClickablility(advanceButton,2);
 //        advanceButton.click();
 //        proceedLink.click();
     }

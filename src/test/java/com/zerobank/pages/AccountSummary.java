@@ -1,6 +1,6 @@
 package com.zerobank.pages;
 
-import com.zerobank.utilities.BrowserUtils;
+import com.zerobank.utilities.Utils;
 import com.zerobank.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,7 +32,7 @@ public class AccountSummary {
 
     public String getPageSubTitle() {
         //ant time we are verifying page name, or page subtitle, loader mask appears
-        BrowserUtils.waitFor(2);
+        Utils.waitFor(2);
         return Driver.get().getTitle();
     }
 

@@ -3,7 +3,6 @@ package com.zerobank.stepdefinations;
 import com.zerobank.pages.AccountActivity;
 import com.zerobank.pages.LoginPage;
 import com.zerobank.pages.PayBillPage;
-import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
 import io.cucumber.java.en.Given;

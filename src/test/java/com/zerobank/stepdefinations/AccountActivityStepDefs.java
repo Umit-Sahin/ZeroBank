@@ -2,7 +2,7 @@ package com.zerobank.stepdefinations;
 
 import com.zerobank.pages.AccountActivity;
 import com.zerobank.pages.LoginPage;
-import com.zerobank.utilities.BrowserUtils;
+import com.zerobank.utilities.Utils;
 import com.zerobank.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -32,7 +32,7 @@ public class AccountActivityStepDefs {
     public void account_activity_page_should_have_to_following(String dropdownOptions) {
         AccountActivity accountActivity = new AccountActivity();
         Select select=new Select(accountActivity.accountDropbox);
-        List<String > actualOptions = BrowserUtils.getElementsText(select.getOptions());
+        List<String > actualOptions = Utils.getElementsText(select.getOptions());
         System.out.println("actualOptions = " + actualOptions);
         Assert.assertTrue(actualOptions.contains(dropdownOptions));
 
@@ -48,7 +48,7 @@ public class AccountActivityStepDefs {
     public void transactions_table_must_have(String transactionColumns) {
         AccountActivity accountActivity = new AccountActivity();
 
-        List<String > actualColumnNames = BrowserUtils.getElementsText(accountActivity.transactionColumns);
+        List<String > actualColumnNames = Utils.getElementsText(accountActivity.transactionColumns);
         System.out.println("actualColumnNames = " + actualColumnNames);
         Assert.assertTrue(actualColumnNames.contains(transactionColumns));
     }
