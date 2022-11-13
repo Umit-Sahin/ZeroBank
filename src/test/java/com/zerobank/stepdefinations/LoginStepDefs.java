@@ -56,4 +56,6 @@ public class LoginStepDefs {
         Assert.assertEquals(errorMessage, actualTitle);
     }
 
+    // Trial for GitHub Action
+
 }
